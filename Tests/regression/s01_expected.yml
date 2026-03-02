@@ -1,0 +1,11 @@
+# Regression Test Fixtures
+# Expected values for strategy backtest validation against notebook results
+
+# S01: TSMOM Moskowitz 2012
+S01_TSMOM_Moskowitz:
+  test_date: "2020-01-31"
+  test_symbol: "ES"
+  expected_signal: 1
+  expected_weight_min: 1.5
+  expected_weight_max: 2.2
+  tolerance: 0.1
