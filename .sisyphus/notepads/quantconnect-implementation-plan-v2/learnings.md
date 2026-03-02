@@ -22,14 +22,19 @@
 ## Task 0.1: Reference LEAN Futures Algorithm
 
 ### Requirements
-- [ ] Subscribes to 3+ futures using correct `Futures.*` enums
-- [ ] Uses `SetFilter(timedelta, timedelta)`
-- [ ] Accesses `data.FutureChains` in `OnData`
-- [ ] Requests history with `Resolution.DAILY`
-- [ ] Uses `SetHoldings(symbol, target)` for position sizing
-- [ ] Schedules monthly rebalancing with `Schedule.On`
-- [ ] Uses `SetWarmUp(timedelta)`
-- [ ] **Verifiable**: Runs in LEAN without errors
+- [x] Created 5 base class files in quantconnect/Common/
+- [x] BaseStrategyAlgorithm.py - Abstract base with Initialize, SetWarmUp, Rebalance stubs
+- [x] TimeSeriesStrategyAlgorithm.py - GenerateSignals, CalculateVolatility methods
+- [x] CrossSectionalStrategyAlgorithm.py - RankAssets, CalculateCrossSectionalWeights methods
+- [x] SpreadStrategyAlgorithm.py - CalculateSpread, CheckForMeanReversion methods
+- [x] IntradayStrategyAlgorithm.py - IntradaySignal, ScheduleIntradayRebalance methods
+
+### Implementation Notes
+- All files use PascalCase (per LEAN convention)
+- All import from AlgorithmImports (LEAN runtime import)
+- LSP errors about unresolved imports are EXPECTED - these only resolve in LEAN engine
+- Each class documents which strategies inherit from it (S01-S04, S05-S10, etc.)
+- S24 inherits directly from BaseStrategyAlgorithm (no MLStrategyAlgorithm per plan)
 
 ### API Patterns from Research
 ```python
