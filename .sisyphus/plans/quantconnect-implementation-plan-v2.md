@@ -474,9 +474,9 @@ quantconnect/
 - [x] Style guide (PascalCase) documented
 
 ### Before Wave 2 (P0 Strategies):
-- [ ] Detailed plans for S01, S02, S05, S06
-- [ ] Base classes implemented and tested
-- [ ] Utilities (VolCalc, PortfolioConstructor) working
+- [x] Detailed plans for S01, S02, S05, S06
+- [x] Base classes implemented and tested
+- [x] Utilities (VolCalc, PortfolioConstructor) working
 
 ### Before Wave 4 (P2 Strategies):
 - [ ] Detailed plans for S11, S12, S14 ⚠️ **CRITICAL**
